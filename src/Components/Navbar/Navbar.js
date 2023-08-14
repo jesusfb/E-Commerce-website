@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import '../../Components/Navbar/MusicHead.css';
 import './style.css';
 
-const Navbars = () => {
+const Navbars = (props) => {
   return (
     <Fragment>
       <Navbar className="w-full" bg="dark">
@@ -24,8 +24,8 @@ const Navbars = () => {
           </Navbar.Collapse>
           <Nav className="ml-auto">
               <div className="flex items-center border border-red-600 rounded p-2 text-white cursor-pointer">
-                <FaShoppingCart size={25} />
-                <span className="mx-1 md:mx-2 text-base md:text-xl text-white">
+                <FaShoppingCart size={25} onClick={props.cartHandler}/>
+                <span className="mx-1 md:mx-2 text-base md:text-xl text-white" onClick={props.cartHandler}>
                   Cart <span className="text-red-800 ">0</span>
                 </span>
               </div>

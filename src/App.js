@@ -1,14 +1,27 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import Navbars from "./Components/Navbar/Navbar";
-import Album from "./Components/Navbar/Albums/AlbumItem";
+import Album from "./Components/Albums/AlbumItem";
+import CartContextProvider from "./Components/Store/CartContextProvider";
+import CartItem from "./Components/Cart/Cart";
 
 let App = () => {
+  const [isDisplay,setDisplay]=useState(false);
+
+  const Carthandler=()=>{
+    setDisplay(true);
+  }
+
+  const CloseCart=()=>{
+    setDisplay(false);
+  }
   return (
-    <Fragment>
-      <Navbars />
+    <CartContextProvider>
+      {isDisplay && <CartItem closebtn={CloseCart}/>}
+      <Navbars cartHandler={Carthandler}/>
       <Album />
-    </Fragment>
+    </CartContextProvider>
   );
 };
 
 export default App;
+

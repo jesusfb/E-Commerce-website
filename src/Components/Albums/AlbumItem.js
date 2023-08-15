@@ -1,7 +1,7 @@
 import React, { Fragment, useContext} from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import CartContext from "../Store/CartContext";
-import './AlbumImage.css';
+
 
 const AlbumItem = () => {
   const ctxt = useContext(CartContext);

@@ -1,13 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Modal from "../UI/Modal";
 import { Button } from "react-bootstrap";
 import "../Navbar/MusicHead.css";
 import CartContext from "../Store/CartContext";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Cart = (props) => {
   const ctxt = useContext(CartContext);
+
+  // Order message
+  const [display, setDisplay] = useState(false);
+
   let totalAmount = 0;
   ctxt.item.forEach((it) => (totalAmount += it.price));
+
+  const hasItem = ctxt.item.length > 0;
+
+  // For clear cart
+  const ClearCartHandler = () => {
+    ctxt.clearCart();
+    setDisplay(true);
+    setTimeout(() => {
+      setDisplay(false);
+    }, 1000);
+  };
 
   return (
     <Modal>
@@ -46,6 +62,7 @@ const Cart = (props) => {
                   <Button
                     variant="danger"
                     className="w-20 h-10 md:w-24 md:h-12"
+                    onClick={() => ctxt.removeFromCart(it.title)}
                   >
                     Remove
                   </Button>
@@ -55,10 +72,28 @@ const Cart = (props) => {
           );
         })}
         <div className="ml-2 d-flex justify-between mt-1 mb-1">
-          <span className="text-xl font-bold">Total Amount $ {totalAmount}</span>
-          <Button  className="w-20 h-10 md:w-20 md:h-10 mr-4 px-2" variant="outline-success">
-            Purchase
-          </Button>
+          <span className="text-xl font-bold">
+            Total Amount <span className="text-red-600">$ {totalAmount}</span>
+          </span>
+          {hasItem && (
+            <Button
+              className="w-20 h-10 md:w-20 md:h-10 mr-4 px-2"
+              variant="outline-success"
+              onClick={ClearCartHandler}
+            >
+              Purchase
+            </Button>
+          )}
+        </div>
+        <div className="flex justify-center items-center">
+          {display && (
+            <div className="flex items-center">
+              <p className="text-green-600 text-xl text-center ml-2">
+                Order Successful
+              </p>
+              <FaCheckCircle className="text-green-600 ml-2 mb-3" />
+            </div>
+          )}
         </div>
       </div>
     </Modal>

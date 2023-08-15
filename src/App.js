@@ -5,23 +5,23 @@ import CartContextProvider from "./Components/Store/CartContextProvider";
 import CartItem from "./Components/Cart/Cart";
 
 let App = () => {
-  const [isDisplay,setDisplay]=useState(false);
+  const [isDisplay, setDisplay] = useState(false);
 
-  const Carthandler=()=>{
+  const Carthandler = () => {
     setDisplay(true);
-  }
+  };
 
-  const CloseCart=()=>{
+  const CloseCart = () => {
     setDisplay(false);
-  }
+  };
+
   return (
     <CartContextProvider>
-      {isDisplay && <CartItem closebtn={CloseCart}/>}
-      <Navbars cartHandler={Carthandler}/>
+      {isDisplay && <CartItem closebtn={CloseCart} />}
+      <Navbars cartHandler={Carthandler} />
       <Album />
     </CartContextProvider>
   );
 };
 
 export default App;
-

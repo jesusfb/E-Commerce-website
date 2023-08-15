@@ -1,10 +1,15 @@
-import React, { Fragment, useContext} from "react";
+import React, { Fragment, useContext,useState} from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import CartContext from "../Store/CartContext";
-
+import '../Cart/imageAnimation.css';
+import MessageonAdd from "../UI/MessageonAdd";
+import Errmsg from '../UI/Errmessage';
 
 const AlbumItem = () => {
   const ctxt = useContext(CartContext);
+  const [showMsg,setShowMsg]=useState(false);
+  const [messageTitle, setMessageTitle] = useState(""); // State to store message title
+  const [errMsgShow,seterrMsg]=useState(false);
   const productsArr = [
     {
       title: "ALBUM 1",
@@ -40,12 +45,23 @@ const AlbumItem = () => {
 
   // Add Item to cart
   const AddToCart = (id) => {
+    const avl=ctxt.item.find((item)=>item.title === id);
+    if(avl){
+      seterrMsg(true);
+      return;
+    }
     const selectedItem = productsArr.find((item) => item.title === id);
-
     if (selectedItem) {
       ctxt.addItem({ ...selectedItem });
+      setShowMsg(true);
+      setMessageTitle(selectedItem.title);
     }
+    setTimeout(() => {
+      setShowMsg(false);
+    }, 1000);
   };
+
+  
 
   return (
     <Fragment>
@@ -58,7 +74,7 @@ const AlbumItem = () => {
                   <Card className="w-75 mx-auto">
                     {" "}
                     {/* Adjust card width and center */}
-                    <Card.Img variant="top" src={item.imageUrl} />
+                    <Card.Img variant="top" src={item.imageUrl} className="pord" />
                     <Card.Body>
                       <Card.Title>{item.title}</Card.Title>
                       <div className="d-flex justify-content-between align-items-center">
@@ -78,6 +94,8 @@ const AlbumItem = () => {
               ))}
             </Row>
           </Container>
+          {showMsg && <MessageonAdd tit={messageTitle}/>}
+          {errMsgShow && <Errmsg  clk={seterrMsg}/>}
         </div>
       ))}
     </Fragment>

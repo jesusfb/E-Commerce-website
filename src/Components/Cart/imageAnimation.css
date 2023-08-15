@@ -1,0 +1,15 @@
+.pord{
+  transform-origin: center center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  transition: ease-in 0.5s;
+  filter: brightness(100%);
+}
+
+.pord:hover {
+  transform: scale(1.1);
+  filter: brightness(130%);
+}

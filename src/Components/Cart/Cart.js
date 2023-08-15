@@ -6,6 +6,8 @@ import CartContext from "../Store/CartContext";
 
 const Cart = (props) => {
   const ctxt = useContext(CartContext);
+  let totalAmount = 0;
+  ctxt.item.forEach((it) => (totalAmount += it.price));
 
   return (
     <Modal>
@@ -17,7 +19,7 @@ const Cart = (props) => {
       <div>
         <h2 className="music-heading text-center">CART</h2>
       </div>
-      <div className=" overflow-scroll" style={{ maxHeight: "300px" }} >
+      <div className=" overflow-scroll" style={{ maxHeight: "300px" }}>
         {ctxt.item.map((it) => {
           return (
             <div
@@ -38,6 +40,7 @@ const Cart = (props) => {
                   <input
                     type="text"
                     value="x 1"
+                    readOnly
                     className="w-10 h-10 border border-red-600 rounded outline-none text-center ml-2 mr-3 md:ml-4 md:mr-2"
                   />
                   <Button
@@ -51,6 +54,12 @@ const Cart = (props) => {
             </div>
           );
         })}
+        <div className="ml-2 d-flex justify-between mt-1 mb-1">
+          <span className="text-xl font-bold">Total Amount $ {totalAmount}</span>
+          <Button  className="w-20 h-10 md:w-20 md:h-10 mr-4 px-2" variant="outline-success">
+            Purchase
+          </Button>
+        </div>
       </div>
     </Modal>
   );

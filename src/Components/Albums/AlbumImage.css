@@ -1,0 +1,14 @@
+/* Add this CSS to your existing styles */
+.zoomed {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: ease-in 0.5s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  transition-property: all;
+  transform-origin: center center;
+}

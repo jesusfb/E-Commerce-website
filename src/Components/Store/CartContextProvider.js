@@ -2,31 +2,13 @@ import React,{useState} from 'react';
 import CartContext from './CartContext';
 
 const CartContextProvider = (props) => {
-  const productsArr = [
-    {
-      title: "ALBUM 1",
-      price: 100,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-    },
-    {
-      title: "ALBUM 2",
-      price: 50,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-    },
-    {
-      title: "ALBUM 3",
-      price: 70,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-    },
-    {
-      title: "ALBUM 4",
-      price: 100,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
-    },
-  ];
-   const [items,setItems]=useState(productsArr);
+   const [items,setItems]=useState([]);
+   const addItemToCart=(it)=>{
+    setItems([...items,it])
+   }
    const obj={
     item:items,
+    addItem:addItemToCart,
    }
   return (
     <CartContext.Provider value={obj}>

@@ -2,7 +2,7 @@
   content: '';
   width: 0%;
   height: 2px; /* thickness of underline*/
-  background:rgb(28, 180, 28);
+  background:rgb(204, 129, 129);
   display:block;
   transition: 0.5s;
 }

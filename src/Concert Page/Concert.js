@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FaPlayCircle } from "react-icons/fa";
 import ConcertDetails from "./ConcertDetails";
+import Footer from "../Footer/Footer";
 import "../Components/Navbar/style.css";
 import "../Components/Navbar/MusicHead.css";
 
@@ -68,6 +69,7 @@ const Concert = () => {
           <ConcertDetails date="DEC 31" city="Delhi" location="Delhi University"/>
         </div>
       </section>
+      <Footer />
     </Fragment>
   );
 };

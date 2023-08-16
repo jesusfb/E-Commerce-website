@@ -4,6 +4,7 @@ import { NavLink} from "react-router-dom";
 import "../Components/Navbar/style.css";
 import "../Components/Navbar/MusicHead.css";
 import IMG from '../Concert Page/assests/musicband.jpg';
+import Footer from "../Footer/Footer";
 
 const About = () => {
   return (
@@ -65,6 +66,7 @@ const About = () => {
           </p>
         </div>
       </section>
+      <Footer />
     </Fragment>
   );
 };

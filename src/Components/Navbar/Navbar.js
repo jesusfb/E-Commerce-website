@@ -41,8 +41,8 @@ const Navbars = (props) => {
                 className="mx-1 md:mx-2 text-base md:text-xl text-white"
                 onClick={props.cartHandler}
               >
-                Cart{" "}
-                <span className="text-white">
+                Cart
+                <span className="text-red-800 ml-1">
                   {ctxt.item.length}
                 </span>
               </span>

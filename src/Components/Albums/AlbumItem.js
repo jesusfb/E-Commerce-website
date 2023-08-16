@@ -4,6 +4,14 @@ import CartContext from "../Store/CartContext";
 import '../Cart/imageAnimation.css';
 import MessageonAdd from "../UI/MessageonAdd";
 import Errmsg from '../UI/Errmessage';
+import IMG1 from'../../Concert Page/assests/img1.jpg';
+import IMG2 from'../../Concert Page/assests/img2.jpeg';
+import IMG3 from'../../Concert Page/assests/img3.jpg';
+import IMG4 from'../../Concert Page/assests/Img4.jpg';
+import IMG5 from'../../Concert Page/assests/img5.jpeg';
+import IMG6 from'../../Concert Page/assests/img6.jpeg';
+import IMG7 from'../../Concert Page/assests/img7.jpg';
+import IMG8 from'../../Concert Page/assests/img8.jpg';
 
 const AlbumItem = () => {
   const ctxt = useContext(CartContext);
@@ -14,26 +22,42 @@ const AlbumItem = () => {
     {
       title: "ALBUM 1",
       price: 100,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+      imageUrl:IMG3,
     },
     {
       title: "ALBUM 2",
-      price: 50,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+      price: 150,
+      imageUrl:IMG4,
     },
     {
       title: "ALBUM 3",
-      price: 70,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+      price: 170,
+      imageUrl:IMG5,
     },
     {
       title: "ALBUM 4",
-      price: 100,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
+      price: 400,
+      imageUrl:IMG6,
+    },
+    {
+      title: "ALBUM 5",
+      price: 800,
+      imageUrl:IMG1,
+    },
+    {
+      title: "ALBUM 6",
+      price: 900,
+      imageUrl:IMG2,
+    },
+    {
+      title: "ALBUM 7",
+      price: 750,
+      imageUrl:IMG7,
+    },
+    {
+      title: "ALBUM 8",
+      price: 1000,
+      imageUrl:IMG8,
     },
   ];
 

@@ -42,7 +42,7 @@ const Navbars = (props) => {
                 onClick={props.cartHandler}
               >
                 Cart{" "}
-                <span className="text-white bg-black rounded">
+                <span className="text-white">
                   {ctxt.item.length}
                 </span>
               </span>

@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink} from "react-router-dom";
 import "../Components/Navbar/style.css";
 import "../Components/Navbar/MusicHead.css";
+import IMG from '../Concert Page/assests/musicband.jpg';
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
           <img
-            src="https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png"
+            src={IMG}
             alt="err"
             className="mt-5 rounded-full w-48 h-48 md:mr-8"
           />

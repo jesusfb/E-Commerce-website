@@ -1,16 +1,16 @@
 import React from "react";
-import ErrModal from "./ErrModal";
+import MsgModal from "./MsgModal";
 import { Button } from "react-bootstrap";
 
-const Errmessage = (props) => {
+const TktBookMsg = (props) => {
   const btnHandler = () => {
     props.clk(false);
   };
   return (
-    <ErrModal>
+    <MsgModal>
       <div>
         <p className="font-semibold text-center">
-          This Item is Already Added !!
+         <span className="text-green-800">Thanks !!</span> Your Ticket Is Booked.
         </p>
       </div>
       <div className="d-flex justify-content-center">
@@ -21,8 +21,8 @@ const Errmessage = (props) => {
           Close
         </Button>
       </div>
-    </ErrModal>
+    </MsgModal>
   );
 };
 
-export default Errmessage;
+export default TktBookMsg;

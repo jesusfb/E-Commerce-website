@@ -23,8 +23,8 @@ const Navbars = (props) => {
                 </NavLink>
               </Nav.Link>
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
-                <NavLink to="/store" className="no-underline" activeClassName="active" style={{ color: "white" }}>
-                  STORE
+                <NavLink to="/concert" className="no-underline" activeClassName="active" style={{ color: "white" }}>
+                  CONCERT
                 </NavLink>
               </Nav.Link>
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
@@ -52,7 +52,7 @@ const Navbars = (props) => {
       </Navbar>
       <div className="mt-1">
         <h1 className="p-5 md:p-10 text-4xl md:text-8xl text-center bg-red-200">
-          The Generics
+          The <span className="text-red-500">Generics</span>
         </h1>
       </div>
       <div>

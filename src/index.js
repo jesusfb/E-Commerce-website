@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About Page/About";
+import Concert from "./Concert Page/Concert";
 /*
 import react Bootstrap 
 */
@@ -14,5 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   { path: "/about", element: <About /> },
   { path: "/", element: <App /> },
+  { path: "/concert", element: <Concert /> },
 ]);
 root.render(<RouterProvider router={router} />);

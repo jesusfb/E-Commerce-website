@@ -15,7 +15,7 @@ const About = () => {
                 <NavLink to="/" className="no-underline" activeClassName="active" style={{ color: "white" }}>HOME</NavLink>
               </Nav.Link>
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
-              <NavLink to="/store" className="no-underline" activeClassName="active" style={{ color: "white" }}>STORE</NavLink>
+              <NavLink to="/concert" className="no-underline" activeClassName="active" style={{ color: "white" }}>CONCERT</NavLink>
               </Nav.Link>
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
               <NavLink to="/about" className="no-underline" activeClassName="active">ABOUT</NavLink>
@@ -26,7 +26,7 @@ const About = () => {
       </Navbar>
       <div className="mt-1">
         <h1 className="p-5 md:p-10 text-4xl md:text-8xl text-center bg-red-200">
-          The Generics
+          The <span className="text-red-500">Generics</span>
         </h1>
       </div>
       <section className="mt-0 mx-auto text-xl px-4 md:w-3/4 lg:w-3/4">
@@ -69,4 +69,3 @@ const About = () => {
 };
 
 export default About;
-/* */

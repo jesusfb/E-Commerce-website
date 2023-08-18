@@ -85,7 +85,6 @@ const AlbumItem = () => {
     }, 1000);
   };
 
-  
 
   return (
     <Fragment>

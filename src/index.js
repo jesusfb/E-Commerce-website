@@ -5,6 +5,7 @@ import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About Page/About";
 import Concert from "./Concert Page/Concert";
+import Contact from "./Contact Page/Contact";
 /*
 import react Bootstrap 
 */
@@ -16,5 +17,6 @@ const router = createBrowserRouter([
   { path: "/about", element: <About /> },
   { path: "/", element: <App /> },
   { path: "/concert", element: <Concert /> },
+  { path: "/contact", element: <Contact /> },
 ]);
 root.render(<RouterProvider router={router} />);

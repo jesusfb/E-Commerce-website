@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../Components/Navbar/style.css";
 import "../Components/Navbar/MusicHead.css";
-import IMG from '../Concert Page/assests/musicband.jpg';
+import IMG from "../Concert Page/assests/musicband.jpg";
 import Footer from "../Footer/Footer";
 
 const About = () => {
@@ -12,15 +12,45 @@ const About = () => {
       <Navbar className="w-full" bg="dark">
         <Container>
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="m-auto text-center text-base md:text-xl z-1 bg-dark">
+            <Nav className="m-auto text-center text-base md:text-xl z-1 bg-dark">
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 nav-link">
-                <NavLink to="/" className="no-underline" activeClassName="active" style={{ color: "white" }}>HOME</NavLink>
+                <NavLink
+                  to="/"
+                  className="no-underline"
+                  activeClassName="active"
+                  style={{ color: "white" }}
+                >
+                  HOME
+                </NavLink>
               </Nav.Link>
-              <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
-              <NavLink to="/concert" className="no-underline" activeClassName="active" style={{ color: "white" }}>CONCERT</NavLink>
+              <Nav.Link href="#/" className=" px-3 md:px-3 py-2 nav-link">
+                <NavLink
+                  to="/concert"
+                  className="no-underline"
+                  activeClassName="active"
+                  style={{ color: "white" }}
+                >
+                  CONCERT
+                </NavLink>
               </Nav.Link>
-              <Nav.Link href="#/" className=" px-3 md:px-3 py-2 ">
-              <NavLink to="/about" className="no-underline" activeClassName="active">ABOUT</NavLink>
+              <Nav.Link href="#/" className=" px-3 md:px-3 py-2 nav-link">
+                <NavLink
+                  to="/about"
+                  className="no-underline"
+                  activeClassName="active"
+                >
+                  ABOUT
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link href="#/" className=" px-3 md:px-3 py-2 nav-link">
+                <NavLink
+                  to="/contact"
+                  className="no-underline"
+                  activeClassName="active"
+                  style={{ color: "white" }}
+                >
+                  CONTACT
+                </NavLink>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -1,28 +1,20 @@
-import React, { useState } from "react";
-import Navbars from "./Components/Navbar/Navbar";
-import Album from "./Components/Albums/AlbumItem";
-import CartContextProvider from "./Components/Store/CartContextProvider";
-import CartItem from "./Components/Cart/Cart";
-import Footer from "./Footer/Footer";
+import React, { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import DuplicateApp from "./DuplicateApp";
+import About from "./About Page/About";
+import Concert from "./Concert Page/Concert";
+import Contact from "./Contact Page/Contact";
 
 let App = () => {
-  const [isDisplay, setDisplay] = useState(false);
-
-  const Carthandler = () => {
-    setDisplay(true);
-  };
-
-  const CloseCart = () => {
-    setDisplay(false);
-  };
-
   return (
-    <CartContextProvider>
-      {isDisplay && <CartItem closebtn={CloseCart} />}
-      <Navbars cartHandler={Carthandler} />
-      <Album />
-      <Footer />
-    </CartContextProvider>
+    <Fragment>
+      <Routes>
+        <Route path="/" element={<DuplicateApp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/concert" element={<Concert />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </Fragment>
   );
 };
 

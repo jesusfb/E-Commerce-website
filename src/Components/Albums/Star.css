@@ -1,0 +1,7 @@
+.star-filled {
+  color: rgb(249, 249, 123); /* Set the color to yellow for filled stars */
+}
+
+.star-empty {
+  color: gray; /* Set the color to gray for empty stars */
+}

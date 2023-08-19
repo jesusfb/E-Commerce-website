@@ -192,3 +192,61 @@ const AlbumItem = () => {
 };
 
 export default AlbumItem;
+
+// Show Album Details on click viewDetails button in other page not by modal.
+
+/* import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+const AlbumItem = () => {
+
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          </Route>
+          <Route path="/details/:albumTitle">
+            <AlbumDetails />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  };
+  
+  export default AlbumItem;
+
+
+import { Link } from "react-router-dom";
+const AlbumItem = () => {
+
+  return (
+    <Button
+      variant="secondary"
+      as={Link}
+      to={`/details/${item.title}`}
+      className="mb-2 sm:mb-0"
+    >
+      View Details
+    </Button>
+  );
+};
+
+import { useParams } from "react-router-dom";
+
+const AlbumDetails = () => {
+  const { albumTitle } = useParams();
+  const album = productsArr.find((item) => item.title === albumTitle);
+
+  if (!album) {
+    return <div>Album not found</div>;
+  }
+
+  return (
+    <div>
+       Display the details of the album using the 'album' object
+       For example, album.Name, album.imageUrl, etc. 
+      </div>
+      );
+    };
+    
+    export default AlbumDetails;
+    
+*/

@@ -15,7 +15,7 @@ const About = () => {
             <Nav className="m-auto text-center text-base md:text-xl z-1 bg-dark">
               <Nav.Link href="#/" className=" px-3 md:px-3 py-2 nav-link">
                 <NavLink
-                  to="/"
+                  to="/home"
                   className="no-underline"
                   activeClassName="active"
                   style={{ color: "white" }}

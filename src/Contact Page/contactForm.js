@@ -19,7 +19,7 @@ const ContactForm = () => {
     // using Firebase to rcv user Data and send it to the database.
     try {
       const response = await fetch(
-        "https://react-http-a47ef-default-rtdb.firebaseio.com/Contact.json",
+        "https://e-commerce-website-2b799-default-rtdb.firebaseio.com/Contact.json",
         {
           method: "POST",
           body: JSON.stringify(userDetails),

@@ -57,7 +57,7 @@ const Concert = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className="mt-1">
+      <div>
         <h1 className="p-5 md:p-10 text-4xl md:text-8xl text-center bg-red-200">
           The <span className="text-red-500">Generics</span>
           <div className=" mt-3 md:mt-1">

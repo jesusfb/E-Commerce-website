@@ -6,10 +6,11 @@ import CartContext from "../Store/CartContext";
 import AuthContext from "../../LoginPage/AuthContext";
 import "../../Components/Navbar/MusicHead.css";
 import "./style.css";
+import Homeheading from "./Homeheading";
 
 const Navbars = (props) => {
   const ctxt = useContext(CartContext);
-  const Authctxt=useContext(AuthContext);
+  const Authctxt = useContext(AuthContext);
   return (
     <Fragment>
       <Navbar className="w-full flex-wrap" bg="dark">
@@ -57,17 +58,17 @@ const Navbars = (props) => {
           </Nav>
         </Navbar.Collapse>
         <Nav className="ml-40">
-          <div className="flex items-center border-1 border-red-600 rounded p-2 text-white cursor-pointer w-auto nav-cart">
+          <div className="flex items-center border-1 border-red-600 rounded p-1 text-white cursor-pointer w-auto nav-cart">
             <FaShoppingCart size={25} onClick={props.cartHandler} />
             <span
               className="mx-1 md:mx-2 text-base md:text-xl text-white"
               onClick={props.cartHandler}
             >
-              Cart <span className="text-red-800">{ctxt.item.length}</span>
+              Cart <span className="text-red-800 text-xl">{ctxt.item.length}</span>
             </span>
           </div>
         </Nav>
-        <Nav.Link href="#/" className=" px-2 md:px-3 py-2">
+        <div href="#/" className=" px-2 md:px-3 py-2">
           <NavLink
             to="/"
             className="no-underline border-1 border-white p-2 rounded hover:font-semibold hover:bg-slate-500"
@@ -77,16 +78,9 @@ const Navbars = (props) => {
           >
             LOGOUT
           </NavLink>
-        </Nav.Link>
+        </div>
       </Navbar>
-      <div className="mt-1 bg-red-200">
-        <h1 className="p-5 md:p-10 text-4xl md:text-8xl text-center">
-          The <span className="text-red-500">Generics</span>
-        </h1>
-      </div>
-      <div>
-        <h1 className="text-center font-bold music-heading">Music</h1>
-      </div>
+      <Homeheading />
     </Fragment>
   );
 };

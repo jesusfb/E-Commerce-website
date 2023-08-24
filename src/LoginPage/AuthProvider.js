@@ -4,6 +4,7 @@ import AuthContext from './AuthContext';
 const AuthProvider = (props) => {
   const initialToken=localStorage.getItem("Token")
   const[Token,setToken]=useState(initialToken);
+  const[Mail,setMail]=useState(null);
   const userLoggedIn=!!Token;
   const loginHandler=(token)=>{
     setToken(token);
@@ -11,11 +12,17 @@ const AuthProvider = (props) => {
   }
   const logOutHandler=()=>{
     setToken(null);
+    setMail(null);
     localStorage.removeItem("Token")
+  }
+  const LoggedUserEmailHandler=(inputMail)=>{
+    setMail(inputMail);
   }
   const ContextValue={
     token:Token,
     isLoggedIn:userLoggedIn,
+    userMail:LoggedUserEmailHandler,
+    MailId:Mail,
     Login:loginHandler,
     Logout:logOutHandler
   }

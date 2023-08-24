@@ -6,7 +6,7 @@ const CartContextProvider = (props) => {
   
 
    const addItemToCart=(it)=>{
-    setItems([...items,it])
+    setItems((prevItems) => [...prevItems, it]);
    }
 
   //  Remove from cart on click remove btn

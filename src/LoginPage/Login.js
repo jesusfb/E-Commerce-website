@@ -49,6 +49,9 @@ const LoginPage = () => {
       setLoading(false);
       if (Response.ok) {
         const Data = await Response.json();
+        // Sending Email
+        Authctxt.userMail(Data.email)
+        
         Authctxt.Login(Data.idToken);
         navigate("/home");
         userEmail.current.value = "";

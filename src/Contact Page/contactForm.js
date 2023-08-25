@@ -49,7 +49,7 @@ const ContactForm = () => {
         <label htmlFor="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" ref={Phone} required />
 
-        <button type="submit" className="btns">
+        <button type="submit" className="btns mt-2">
           Submit
         </button>
       </form>
